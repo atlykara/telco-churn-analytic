@@ -1,18 +1,13 @@
-# Python
+
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Virtual env
 .venv/
 
-# Spark / temp
 *.log
 .derby/
-
-# Model artifacts (optional, if you don't want to push the trained model)
 data/telco_churn_model/
 
-# OS junk
 .DS_Store
