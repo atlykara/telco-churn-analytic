@@ -1,7 +1,9 @@
 ## 1. Start Zookeeper: First Terminal
+   cd ~/tools/kafka
    bin/zookeeper-server-start.sh config/zookeeper.properties
 
 ## 2. Start Kafka broker: Second Terminal
+   cd ~/tools/kafka
    bin/kafka-server-start.sh config/server.properties
 
 ## 3. Create topic (only once):
@@ -15,7 +17,14 @@
    python src/train_model.py
 
 ## 5. Start streaming consumer: Third Terminal
-   python src/spark_stream.py
+   cd ~/projects/telco-churn-analytic
+   source .venv/bin/activate
+   cd src
+   python spark_stream.py
 
 ## 6. Start producer: Fourth Terminal
-   python src/producer.py
+   cd ~/projects/telco-churn-analytic
+   source .venv/bin/activate
+   cd src
+   python producer.py
+
